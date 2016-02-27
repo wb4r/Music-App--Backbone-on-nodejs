@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Music App Store</title>
+    <link rel="stylesheet" href="css/vendor/bootstrap.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <span class="glyphicon glyphicon-music"></span>
+            Music App
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Collaborate</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="app-container" class="container-fluid">
+      <div id="main-region" class="container">
+        <p>Here is static content in the web page. You'll notice that it gets
+        replaced by our app as soon as we start it.</p>
+      </div>
+    </div>
+    <script type="text/template" id="intro-album">
+
+      <img src="<%-cover %>"/>
+      <h3><strong><%-title%></strong></h3>
+      <hr>
+      <h4>Artist: <%-artist%></h4>
+      Released: <%-date%>
+      <br><br>
+      <button class="btn btn-sm btn-warning">View Tracks</button>
+    </script>
+
+    <script type="text/template" id="intro-albums">
+      <div class="container">
+          <h1>Albums</h1>
+        <div class="row well">
+        </div>
+      </div>
+    </script>
+
+    <!-- Backbone.js Marionette.js PACK -->
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/json2.js"></script>
+    <script src="js/vendor/underscore.js"></script>
+    <script src="js/vendor/backbone.js"></script>
+    <script src="js/vendor/backbone.marionette.js"></script>
+
+    <!-- app -->
+    <script src="js/app.js"></script>
+    <!-- Sub-module Intro -->
+    <!-- Intro.Controller -->
+    <script src="js/submodule_intro/controller.js"></script>
+    <!-- Intro.Entities -->
+    <script src="js/submodule_intro/entities/entities.js"></script>
+    <!-- Intro.Views -->
+    <script src="js/submodule_intro/views/views.js"></script>
+
+
+    <script type="text/javascript">
+      App.start()
+    </script>
+  </body>
+</html>
+
+
+
+
+    <!-- <script src="js/submodule_intro/entities/collection.js"></script> -->
+    <!-- <script src="js/submodule_intro/entities/model.js"></script> -->
+    <!-- <script src="js/submodule_intro/views/collection.js"></script>
+    <script src="js/submodule_intro/views/model.js"></script> -->
