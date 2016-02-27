@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Music App Store</title>
     <link rel="stylesheet" href="css/vendor/bootstrap.css">
+    <link rel="stylesheet" href="css/vendor/backbone.modal.css">
+    <link rel="stylesheet" href="css/vendor/backbone.modal.theme.css">
     <link rel="stylesheet" href="css/stylesheet.css">
   </head>
   <body>
@@ -41,6 +43,13 @@
         <p>Here is static content in the web page. You'll notice that it gets
         replaced by our app as soon as we start it.</p>
       </div>
+      <div id="dialog-region"> </div>
+      <div id="overlay">
+
+        <div class="well">
+
+        </div>
+      </div>
     </div>
     <script type="text/template" id="intro-album">
 
@@ -60,20 +69,42 @@
         </div>
       </div>
     </script>
-
     <script type="text/template" id="dialog-track">
-      <%- title %> <%- length %>
+      <div class="singleTrack">
+        <li>
+          <span><%- title %></span><span style="float: right;"><%- length %></span>
+        </li>
+      </div>
     </script>
 
     <script type="text/template" id="dialog-tracks">
-      <div class="container">
+      <div class="well col-xs-6 col-xs-offset-3 insideOverlay">
+        <a href="#" class="closeDialog">
+          Close
+        </a>
+        <ol></ol>
+     </div>
+    </script>
 
+    <script id="modal-view-template" type="text/html">
+      <div class="modal-header">
+        <h2>This is a modal!</h2>
+      </div>
+      <div class="modal-body">
+        <p>With some content in it!</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn">cancel</button>
+        <button class="btn-default">Ok</button>
       </div>
     </script>
+
+    <!-- <div id="overlay"></div> -->
 
 
     <!-- Backbone.js Marionette.js PACK -->
     <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/jquery-ui.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/vendor/json2.js"></script>
     <script src="js/vendor/underscore.js"></script>
@@ -107,11 +138,3 @@
     </script>
   </body>
 </html>
-
-
-
-
-    <!-- <script src="js/submodule_intro/entities/collection.js"></script> -->
-    <!-- <script src="js/submodule_intro/entities/model.js"></script> -->
-    <!-- <script src="js/submodule_intro/views/collection.js"></script>
-    <script src="js/submodule_intro/views/model.js"></script> -->

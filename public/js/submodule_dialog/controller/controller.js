@@ -32,7 +32,14 @@ App.module("Dialog", function(Dialog, App, Backbone, Marionette, $, _) {
         collection: tracks
       })
 
+      tracksView.on("childview:album:close", function(childView, model) {
+        // childView.destroy()
+        console.log("destroy");
+      })
+
+      tracksView.open()
       App.Dialog.regions.dialogTracks.show(tracksView)
+
     }
   }
 

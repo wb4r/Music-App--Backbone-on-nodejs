@@ -9,3 +9,24 @@ body {
   src: url('public/fonts/glyphicons-halflings-regular.eot');
   src: url('public/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.insideOverlay {
+  margin-top: 130px;
+}
+
+.singleTrack {
+  border-bottom: 1px solid orange;
+  padding-bottom: 7px;
+  margin-top: 7px;
+}

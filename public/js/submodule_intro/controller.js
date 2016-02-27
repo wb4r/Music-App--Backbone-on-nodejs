@@ -16,8 +16,6 @@ App.module("Intro", function(Intro, App, Backbone, Marionette, $, _) {
       })
 
       introAlbumsView.on("childview:album:show", function(childView, model) {
-        // console.log(model);
-        // console.log(childView);
         App.Dialog.Controller.showTracks(model)
       })
 

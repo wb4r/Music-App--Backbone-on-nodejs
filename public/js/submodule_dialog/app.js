@@ -4,20 +4,37 @@
 
 App.module("Dialog", function(Dialog, App, Backbone, Marionette, $, _) {
 
+  Dialog.Router = Marionette.AppRouter.extend({
+    appRoutes: {
+      "albums/:title"   :   "getAlbum"
+    }
+  })
+
+  var API = {
+    getAlbum: function(title) {
+      App.Dialog.Controller.showTracks(title)
+    }
+  };
+
+
+
+  Dialog.on("start", function() {
+    new Dialog.Router({
+      controller: API
+    })
+  })
 })
+
+
 
 App.Dialog.on("before:start", function() {
   var Layout = Marionette.LayoutView.extend({
     el: "#app-container",
     regions: {
-      dialogHeader: "#dialogHeader",
-      dialogTracks: "#main-region"
+      // dialogHeader: "#dialogHeader",
+      dialogTracks: "#overlay",
     }
   });
 
   App.Dialog.regions = new Layout();
-})
-
-App.Dialog.on("start", function() {
-  App.Dialog.Controller.showTracks();
 })
