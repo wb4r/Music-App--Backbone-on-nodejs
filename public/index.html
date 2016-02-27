@@ -50,7 +50,7 @@
       <h4>Artist: <%-artist%></h4>
       Released: <%-date%>
       <br><br>
-      <button class="btn btn-sm btn-warning">View Tracks</button>
+      <button href="#" class="btn-show-tracks btn btn-sm btn-warning">View Tracks</button>
     </script>
 
     <script type="text/template" id="intro-albums">
@@ -61,6 +61,17 @@
       </div>
     </script>
 
+    <script type="text/template" id="dialog-track">
+      <%- title %> <%- length %>
+    </script>
+
+    <script type="text/template" id="dialog-tracks">
+      <div class="container">
+
+      </div>
+    </script>
+
+
     <!-- Backbone.js Marionette.js PACK -->
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
@@ -68,6 +79,7 @@
     <script src="js/vendor/underscore.js"></script>
     <script src="js/vendor/backbone.js"></script>
     <script src="js/vendor/backbone.marionette.js"></script>
+
 
     <!-- app -->
     <script src="js/app.js"></script>
@@ -78,6 +90,16 @@
     <script src="js/submodule_intro/entities/entities.js"></script>
     <!-- Intro.Views -->
     <script src="js/submodule_intro/views/views.js"></script>
+
+
+    <!-- Sub-module Dialog -->
+    <script src="js/submodule_dialog/app.js"></script>
+    <!-- Dialog.Controller -->
+    <script src="js/submodule_dialog/controller/controller.js"></script>
+    <!-- Dialog.Entities -->
+    <script src="js/submodule_dialog/entities/entities.js"></script>
+    <!-- Dialog.Views -->
+    <script src="js/submodule_dialog/views/views.js"></script>
 
 
     <script type="text/javascript">
