@@ -4,7 +4,7 @@
   "description": "Music collection app",
   "main": "app.js",
   "scripts": {
-    "start": "npm start",
+    "start": "nodemon app.js",
     "test": "jasmine-node spec --autotest --color --watch ."
   },
   "author": "",
@@ -18,5 +18,8 @@
   "engines": {
     "node": "0.10.42",
     "npm": "3.7.2"
+  },
+  "devDependencies": {
+    "foreman": "^1.4.1"
   }
 }
