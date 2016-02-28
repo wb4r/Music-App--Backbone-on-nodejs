@@ -2,7 +2,7 @@
   "name": "music_store",
   "version": "1.0.0",
   "description": "Music collection app",
-  "main": "app.js",
+  "main": "./public/index.html",
   "scripts": {
     "start": "nodemon app.js",
     "test": "jasmine-node spec --autotest --color --watch ."
