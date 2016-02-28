@@ -14,5 +14,8 @@
     "node-static": "^0.7.7",
     "nodemon": "^1.8.1",
     "request": "^2.69.0"
+  },
+  "engines": {
+    "node": "0.10.42"
   }
 }
