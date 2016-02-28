@@ -4,6 +4,10 @@
 
 App.module("Dialog.Views", function(Views, App, Backbone, Marionette, $, _) {
 
+  Views.Album = Marionette.ItemView.extend({
+    template: "#dialog-album"
+  })
+
   Views.Track = Marionette.ItemView.extend({
     template: "#dialog-track",
     // className: "col-xs-10"
@@ -26,6 +30,8 @@ App.module("Dialog.Views", function(Views, App, Backbone, Marionette, $, _) {
       this.trigger("album:close", this.model);
       this.$el.fadeOut(300)
       $("#overlay").fadeOut(300)
+      App.Dialog.regions.dialogTracks.reset()
+      App.Dialog.regions.dialogHeader.reset()
     }
   })
 

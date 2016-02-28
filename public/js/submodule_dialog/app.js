@@ -29,10 +29,10 @@ App.module("Dialog", function(Dialog, App, Backbone, Marionette, $, _) {
 
 App.Dialog.on("before:start", function() {
   var Layout = Marionette.LayoutView.extend({
-    el: "#app-container",
+    el: "#overlay",
     regions: {
-      // dialogHeader: "#dialogHeader",
-      dialogTracks: "#overlay",
+      dialogHeader: "#dialogHeader",
+      dialogTracks: "#dialogTracks",
     }
   });
 

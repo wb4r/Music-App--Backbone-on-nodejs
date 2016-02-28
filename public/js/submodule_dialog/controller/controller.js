@@ -29,17 +29,23 @@ App.module("Dialog", function(Dialog, App, Backbone, Marionette, $, _) {
 
       // Albums View
       var tracksView = new App.Dialog.Views.Tracks({
+        model: model,
         collection: tracks
       })
+
+      var albumsView = new App.Dialog.Views.Album({
+        model: model
+      })
+
+      tracksView.open()
+      App.Dialog.regions.dialogTracks.show(tracksView)
+      App.Dialog.regions.dialogHeader.show(albumsView)
+
 
       tracksView.on("childview:album:close", function(childView, model) {
         // childView.destroy()
         console.log("destroy");
       })
-
-      tracksView.open()
-      App.Dialog.regions.dialogTracks.show(tracksView)
-
     }
   }
 

@@ -30,3 +30,8 @@ body {
   padding-bottom: 7px;
   margin-top: 7px;
 }
+
+.main-text,
+ul {
+  font-size: 17px;
+}
